@@ -195,10 +195,6 @@ img {
     gap: 24px;
 }
 
-.our-benefits-list-item {
-    width: calc((100% - 72px) / 4);
-}
-
 .our-benefits-list-name {
     margin-bottom: 8px;
     font-weight: 500;
@@ -265,10 +261,6 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-}
-
-.our-portfolio-list-item {
-    width: calc((100% - 72px) / 4);
 }
 
 .portfolio-container-list {
