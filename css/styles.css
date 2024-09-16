@@ -1,12 +1,26 @@
+/* ================ COMMON STYLES ================ */
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #fff;
 }
-/* reset */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 ul,
 ol {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -16,15 +30,39 @@ h1, h2, h3, h4, h5, h6, p {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
-/* common */
+button {
+    cursor: pointer;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 
 }
-/* header */
+.section-paddings{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+/* ================ HEADER STYLES ================ */
 .page-header {
     border-bottom: 1px solid #e7e9fc;
 }
@@ -47,11 +85,10 @@ a {
     gap: 40px;
 }
 
-button {
-    cursor: pointer;
-}
 
 .order-servie-button {
+    display: flex;
+    margin: 0 auto;
     font-weight: 500;
     background-color: #4d5ae5;
     font-size: 16px;
@@ -90,6 +127,7 @@ button {
 
 .footer-logo {
     margin-bottom: 16px;
+    display: inline-block;
 }
 
 .nav-link {
@@ -127,9 +165,14 @@ button {
 .section-main {
     background-color: #2e2f42;
     font-family: inherit;
+    padding: 188px;
 }
 
 .main-title {
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -137,14 +180,6 @@ button {
     text-align: center;
 }
 
-.section-title {
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #2e2f42;
-    text-align: center;
-}
 
 .section-our-team {
     background-color: #f4f4fd;
@@ -170,14 +205,36 @@ button {
     background-color: #FFFFFF;
 }
 
+.our-benefits-list,
+.our-team-list {
+    display: flex;
+    gap: 24px;
+}
+.our-benefits-list-item,
+.our-team-list-item {
+    width: calc((100% - 72px) / 4);
+}
+.our-portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.our-portfolio-list-item {
+    gap: 24px 48 px;
+}
+
 .our-benefits-list-name,
 .our-team-list-fullname,
 .our-portfolio-list-name {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+}
+.our-team-list-fullname,
+.our-team-list-text {
+    text-align: center;
 }
 
 .our-benefits-list-text,
@@ -191,9 +248,13 @@ button {
 }
 
 .page-footer-text {
+    width: 264px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+.footer-container {
+    padding: 120px 0;
 }
